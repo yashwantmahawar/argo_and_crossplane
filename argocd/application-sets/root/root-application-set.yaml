@@ -12,13 +12,18 @@ metadata:
   name: root-application-set
   namespace: argocd # Make sure Argo CD is installed in this namespace
 spec:
+  generators:
+  - list:
+      elements:
+      - cluster: cluster1
+        url: https://github.com/yashwantmahawar/argo_and_crossplane
   template:
     metadata:
-      name: my-app-cluster1 # Name will be my-app-cluster1, my-app-cluster2, etc.
+      name: my-app-{{ cluster }} # Name will be my-app-cluster1, my-app-cluster2, etc.
     spec:
       project: default  # Replace with your Argo CD project name
       source:
-        repoURL: "https://github.com/yashwantmahawar/argo_and_crossplane"
+        repoURL: "{{ url }}"
         targetRevision: HEAD
         recurse: true
         exclude:
