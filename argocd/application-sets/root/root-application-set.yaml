@@ -18,7 +18,7 @@ spec:
     spec:
       project: default  # Replace with your Argo CD project name
       source:
-        repoURL: "https://https://github.com/yashwantmahawar/argo_and_crossplane"
+        repoURL: "https://github.com/yashwantmahawar/argo_and_crossplane"
         targetRevision: HEAD
         recurse: true
         exclude:
