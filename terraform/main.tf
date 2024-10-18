@@ -1,7 +1,6 @@
-provider "google" {
-  project = "black-leg-sanji"
-}
 
+
+data "google_client_config" "default" {}
 resource "google_storage_bucket" "terraform-backend" {
   name          = "terraform-backend-5656"
   location      = "us-central1"

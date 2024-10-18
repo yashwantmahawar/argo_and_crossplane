@@ -1,0 +1,33 @@
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: my-configmap
+#   namespace: default
+# data:
+#   my_key: my_value
+# ---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: root-application-set
+  namespace: argocd # Make sure Argo CD is installed in this namespace
+spec:
+  template:
+    metadata:
+      name: my-app-cluster1 # Name will be my-app-cluster1, my-app-cluster2, etc.
+    spec:
+      project: default  # Replace with your Argo CD project name
+      source:
+        repoURL: "https://https://github.com/yashwantmahawar/argo_and_crossplane"
+        targetRevision: HEAD
+        recurse: true
+        exclude:
+          - '**/argocd/application-set/root/*'
+        path: argocd/application-set/  # Path to your Kubernetes manifests within the repository
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: argocd  # Replace with your desired namespace
+      syncPolicy:
+        automated: 
+          prune: true
+          selfHeal: true
