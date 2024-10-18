@@ -22,8 +22,8 @@ spec:
         targetRevision: HEAD
         recurse: true
         exclude:
-          - '**/argocd/application-set/root/*'
-        path: argocd/application-set/  # Path to your Kubernetes manifests within the repository
+          - '**/argocd/application-sets/root/*'
+        path: argocd/application-sets/  # Path to your Kubernetes manifests within the repository
       destination:
         server: https://kubernetes.default.svc
         namespace: argocd  # Replace with your desired namespace
