@@ -9,3 +9,4 @@ spec:
       containers:
       - name: argocd-add-cluster
         image: yashwantmahawar/argo-cluster-add
+        restartPolicy: Never
