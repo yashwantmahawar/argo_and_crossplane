@@ -3,7 +3,7 @@ kind: ProviderConfig
 metadata:
   name: default
 spec:
-  projectID: iac-prd-v1 #TODO
+  projectID: black-leg-sanji #TODO
   credentials:
     source: Secret
     secretRef:
