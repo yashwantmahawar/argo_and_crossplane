@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: argocd-add-cluster
+  namespace: argocd
 spec:
   template:
     spec:
