@@ -1,0 +1,10 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: argocd-add-cluster
+spec:
+  template:
+    spec:
+      containers:
+      - name: argocd-add-cluster
+        image: yashwantmahawar/argo-cluster-add
