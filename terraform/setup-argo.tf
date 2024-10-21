@@ -62,23 +62,29 @@ resource "kubernetes_manifest" "argocd_application_set" {
   provider = kubernetes
   manifest = {
     apiVersion = "argoproj.io/v1alpha1"
-       kind       = "Application"
-       metadata   = {
-           name      = "root-application-set"
-           namespace = kubernetes_namespace.argocd.metadata.0.name
-       }
-       spec = {
-        project = "default"
-        source = {
-          repoURL = "https://github.com/yashwantmahawar/argo_and_crossplane"
-          path = "argocd/application-sets/root"
-          targetRevision = "HEAD"
+    kind       = "Application"
+    metadata = {
+      name      = "root-application-tf"
+      namespace = kubernetes_namespace.argocd.metadata.0.name
+    }
+    spec = {
+      project = "default"
+      source = {
+        repoURL        = "https://github.com/yashwantmahawar/argo_and_crossplane"
+        path           = "argocd/application-sets/root"
+        targetRevision = "HEAD"
+      }
+      destination = {
+        server    = "https://kubernetes.default.svc"
+        namespace = "argocd"
+      }
+      syncPolicy = {
+        automated = {
+          prune : true
+          selfHeal : true
         }
-        destination = {
-          server = "https://kubernetes.default.svc"
-          namespace = "argocd"
-        }
-       }
+      }
+    }
   }
 }
 
