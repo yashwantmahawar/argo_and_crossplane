@@ -82,6 +82,16 @@ resource "kubernetes_secret" "argocd_initial_admin_secret" {
   }
 }
 
+resource "kubernetes_secret" "crossplane_sa_secret" {
+  metadata {
+    name      = "gcp-secret"
+    namespace = kubernetes_namespace.crossplane.metadata.0.name
+  }
+  data = {
+    creds = base64decode(google_service_account_key.mykey.private_key)
+  }
+}
+
 resource "kubernetes_manifest" "argocd_application_set" {
   provider = kubernetes
   manifest = {

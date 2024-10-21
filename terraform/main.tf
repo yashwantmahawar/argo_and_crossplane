@@ -39,3 +39,26 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
     ]
   }
 }
+
+resource "google_service_account" "service_account" {
+  account_id   = "crossplane-demo"
+  display_name = "crossplane Service Account"
+}
+
+# resource "google_project_iam_binding" "crossplane_owner" {
+#   project = "black-leg-sanji"
+#   role    = "roles/owner"
+#   members = [
+#     "serviceAccount:${google_service_account.service_account.email}"
+#   ]
+# }
+
+resource "google_service_account_key" "mykey" {
+  service_account_id = google_service_account.service_account.name
+  # public_key_type    = "TYPE_RAW_PUBLIC_KEY"
+}
+
+# output "sa_key" {
+#   value = google_service_account_key.mykey.private_key
+#   sensitive = false
+# }
