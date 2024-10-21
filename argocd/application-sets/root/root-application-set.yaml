@@ -25,11 +25,11 @@ spec:
       source:
         repoURL: "{{ url }}"
         targetRevision: HEAD
+        path: argocd/application-sets/  # Path to your Kubernetes manifests within the repository
       directory:
         recurse: true
         exclude:
           - '**/argocd/application-sets/root/*'
-        path: argocd/application-sets/  # Path to your Kubernetes manifests within the repository
       destination:
         server: https://kubernetes.default.svc
         namespace: argocd  # Replace with your desired namespace
