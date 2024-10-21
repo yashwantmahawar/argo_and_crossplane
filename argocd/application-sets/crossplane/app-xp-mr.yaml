@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+ name: crossplane-mr
+ namespace: argocd
+spec:
+ project: default
+ source:
+   repoURL: 'https://github.com/yashwantmahawar/argo_and_crossplane'
+   targetRevision: HEAD
+   path: 'crossplane/managed-resource'
+ destination:
+   server: 'https://kubernetes.default.svc'
+   namespace: crossplane-system
+ syncPolicy:
+   automated:
+     prune: true
+     selfHeal: true
+   syncOptions:
+   - CreateNamespace=true
