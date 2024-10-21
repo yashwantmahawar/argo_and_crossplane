@@ -19,7 +19,7 @@ spec:
         url: https://github.com/yashwantmahawar/argo_and_crossplane
   template:
     metadata:
-      name: my-app-{{ cluster }} # Name will be my-app-cluster1, my-app-cluster2, etc.
+      name: my-application-{{ cluster }} # Name will be my-app-cluster1, my-app-cluster2, etc.
     spec:
       project: default  # Replace with your Argo CD project name
       source:
