@@ -26,9 +26,9 @@ spec:
         repoURL: "{{ url }}"
         targetRevision: HEAD
         path: argocd/application-sets/  # Path to your Kubernetes manifests within the repository
-      directory:
-        recurse: true
-        exclude:
+        directory:
+         recurse: true
+         exclude:
           - '**/argocd/application-sets/root/*'
       destination:
         server: https://kubernetes.default.svc
