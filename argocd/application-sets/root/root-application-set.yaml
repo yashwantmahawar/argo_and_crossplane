@@ -29,8 +29,7 @@ spec:
         directory:
          recurse: true
          jsonnet: {}
-         exclude:
-          - '**/argocd/application-sets/root/*'
+         exclude: '{**/argocd/application-sets/root/*}'
       destination:
         server: https://kubernetes.default.svc
         namespace: argocd  # Replace with your desired namespace
