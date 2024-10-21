@@ -1,0 +1,273 @@
+[
+    {
+      "addonsConfig": {
+        "dnsCacheConfig": {},
+        "gcePersistentDiskCsiDriverConfig": {
+          "enabled": true
+        },
+        "gcsFuseCsiDriverConfig": {},
+        "horizontalPodAutoscaling": {},
+        "httpLoadBalancing": {},
+        "kubernetesDashboard": {
+          "disabled": true
+        },
+        "networkPolicyConfig": {
+          "disabled": true
+        },
+        "rayOperatorConfig": {}
+      },
+      "authenticatorGroupsConfig": {},
+      "autopilot": {},
+      "autoscaling": {
+        "autoscalingProfile": "BALANCED"
+      },
+      "binaryAuthorization": {
+        "evaluationMode": "DISABLED"
+      },
+      "clusterIpv4Cidr": "192.168.0.0/23",
+      "controlPlaneEndpointsConfig": {
+        "dnsEndpointConfig": {
+          "allowExternalTraffic": false,
+          "endpoint": "gke-995fb5a455c44cf7802e64b382942c2fb98c-286810563715.asia-south1-a.gke.goog"
+        },
+        "ipEndpointsConfig": {
+          "authorizedNetworksConfig": {
+            "gcpPublicCidrsAccessEnabled": true
+          },
+          "enablePublicEndpoint": true,
+          "enabled": true,
+          "privateEndpoint": "10.1.0.11",
+          "publicEndpoint": "34.93.32.208"
+        }
+      },
+      "createTime": "2024-07-10T06:17:36+00:00",
+      "currentMasterVersion": "1.30.5-gke.1014001",
+      "currentNodeCount": 2,
+      "currentNodeVersion": "1.30.5-gke.1014001",
+      "databaseEncryption": {
+        "currentState": "CURRENT_STATE_DECRYPTED",
+        "state": "DECRYPTED"
+      },
+      "defaultMaxPodsConstraint": {
+        "maxPodsPerNode": "32"
+      },
+      "endpoint": "34.93.32.208",
+      "enterpriseConfig": {
+        "clusterTier": "STANDARD"
+      },
+      "etag": "e301cc37-d68e-4f8e-82f7-ad6e00a04b2d",
+      "fleet": {
+        "membership": "//gkehub.googleapis.com/projects/black-leg-sanji/locations/asia-south1/memberships/stadium",
+        "project": "black-leg-sanji"
+      },
+      "id": "995fb5a455c44cf7802e64b382942c2fb98cd473f79b4de39d9b8e4d732c2d6e",
+      "initialClusterVersion": "1.29.4-gke.1043004",
+      "instanceGroupUrls": [
+        "https://www.googleapis.com/compute/v1/projects/black-leg-sanji/zones/asia-south1-a/instanceGroupManagers/gke-stadium-default-pool-e0ba06a4-grp"
+      ],
+      "ipAllocationPolicy": {
+        "clusterIpv4Cidr": "192.168.0.0/23",
+        "clusterIpv4CidrBlock": "192.168.0.0/23",
+        "clusterSecondaryRangeName": "pod",
+        "defaultPodIpv4RangeUtilization": 0.25,
+        "podCidrOverprovisionConfig": {},
+        "servicesIpv4Cidr": "192.168.2.0/23",
+        "servicesIpv4CidrBlock": "192.168.2.0/23",
+        "servicesSecondaryRangeName": "services",
+        "stackType": "IPV4",
+        "useIpAliases": true
+      },
+      "labelFingerprint": "9dcc2361",
+      "legacyAbac": {},
+      "location": "asia-south1-a",
+      "locations": [
+        "asia-south1-a"
+      ],
+      "loggingConfig": {
+        "componentConfig": {
+          "enableComponents": [
+            "SYSTEM_COMPONENTS",
+            "WORKLOADS"
+          ]
+        }
+      },
+      "loggingService": "logging.googleapis.com/kubernetes",
+      "maintenancePolicy": {
+        "resourceVersion": "e3b0c442"
+      },
+      "masterAuth": {
+        "clientCertificateConfig": {},
+        "clusterCaCertificate": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVMVENDQXBXZ0F3SUJBZ0lSQU4zMFg0WUEwaldZZzBnYWtDT2dpeW93RFFZSktvWklodmNOQVFFTEJRQXcKTHpFdE1Dc0dBMVVFQXhNa04yRXlZalJpWTJVdFpHRTFaaTAwWVRkbUxUazVNMlF0WlRjNVlUZ3lZVEJpTUdaawpNQ0FYRFRJME1EY3hNREExTVRjek4xb1lEekl3TlRRd056QXpNRFl4TnpNM1dqQXZNUzB3S3dZRFZRUURFeVEzCllUSmlOR0pqWlMxa1lUVm1MVFJoTjJZdE9Ua3paQzFsTnpsaE9ESmhNR0l3Wm1Rd2dnR2lNQTBHQ1NxR1NJYjMKRFFFQkFRVUFBNElCandBd2dnR0tBb0lCZ1FDeUJaRVZqOHZGYjdzOUhyUUlXRG4xdkxYLzJFZnNqVkxneWxxdworTml3d05BSEVzVlBGSmhLNGlIRTd4d1FBa3JuNnU5RGJjd0R6ZFVlNEVrYnZTRVNQM0p0NHhBRFJJemY1V0twClNmMjk2bVFVSzhVdUJvTk1MUHZlWWoxekZhbjF5QW9RUFlWQjZ0SUxCV0ZjSzRTSkFQQXAzc1hsalcwZllJbGYKRHdJd2VsckU5cXJqWklYNUliUXlaeXNwa25XZUJOaThxOUdWU3dWMnNhTEUrTUE3MXUxVVY4OWs0eGRCS1hzNApJMmRkOVJjTnNwNXMxK3B3VWdTU0ZKVmMrT0QvdGEvVkVKWkhvYzNiOE9Dc3BHV00vdFpURW1QSUFmT1R2QytOCmttZktSWVBlSGlEZ05Gb0hYdjVVS0pqZlNOOE1VNXkvQWVwUk1ocnlENmRHWU4rRldMdjNsQWcrejRSRDhqSE0KK1kxRXBPTERsVkJJbXlMMTFGajRIbWpGMkw3VUlycmc3anR4bExmS0RhZGF4d2ZKTHZCSmRQeFAvOGozRmUwZQpxbHVLM0R4U0owUmtleFl0TFBBbitvTFJLTzUrVkVYZVVZOEh5OVVsRVYyQjduZ2J2aUphdndCU0hyVnJaMDNSCmd5bjdUYnRBY2J5d2hmOFVVNFVpL1ZRRFpuMENBd0VBQWFOQ01FQXdEZ1lEVlIwUEFRSC9CQVFEQWdJRU1BOEcKQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUVGT3l1OUxHL0REZXluMXZUSll6Y09UN1I4a3VqTUEwRwpDU3FHU0liM0RRRUJDd1VBQTRJQmdRQ0V5cVFLbFArNnAwR1VhUTVBN0pBcEU5UmNpaGM4cTNDc0V0d2pqb3lWCjYyQzdWVDlRM1RweXNVSlNSRlR3bWRrck94SkgrTSsxQisvck9xaWxOQXpzTnoxdXFZZTJVMXY3V2hKNWNQYlMKSFdnQzRqcU5IYVk3RXNFRjFWaHhzUUdNUVpnWTlBVVI4dzdUSmwxb0w4cU1xbjRQb2QrdENOR1ZxRFhQV3BMKwpiUk4vb1Y5QlBVVVVTN0JQVFdWOGRCVm5nZExIMDltTWRJRmhkbWs4emZtZzNscTkzL1NlNTVKUnNuMy95VFZFCmQ4UzVNdVNUQkxCUEF0eFdXSGo1QzJzWG1jZmNjWUN0M3BBQ3FYZHUyV1pPVlVxQnI0QXJUa2t1YTMxVkpKVXEKUVNmejdER0VJTFMyQ3pjcW00WnU3UmIxUTZERS9SamFYWXU1NWNPaTlWYk1JemtoYmRvQ01GMVhYZnlPU043Mwo5Nk5sWWxHK2tqR2kydFNpTTlYT1k3WkZZQmY0N2ZhcExDdzdxUmh3dFpaRFF0dEtoZk1iY0V5VXNpVW9xYlBxCllrczgvWk5adlI1SWNENUtCUDRUbkN1WWkvUVJDMHpRdzR6TkJWeXVMTHR2UGFac1dNcDYxT0FGQW9YQlhGS2QKWGdCRGMzT2xtM3JrYjJmaDlMR1ZCd1k9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+      },
+      "masterAuthorizedNetworksConfig": {
+        "gcpPublicCidrsAccessEnabled": true
+      },
+      "monitoringConfig": {
+        "advancedDatapathObservabilityConfig": {},
+        "componentConfig": {
+          "enableComponents": [
+            "SYSTEM_COMPONENTS",
+            "STORAGE",
+            "POD",
+            "DEPLOYMENT",
+            "STATEFULSET",
+            "DAEMONSET",
+            "HPA",
+            "CADVISOR",
+            "KUBELET"
+          ]
+        },
+        "managedPrometheusConfig": {
+          "enabled": true
+        }
+      },
+      "monitoringService": "monitoring.googleapis.com/kubernetes",
+      "name": "stadium",
+      "network": "blackleg-vpc",
+      "networkConfig": {
+        "datapathProvider": "LEGACY_DATAPATH",
+        "defaultSnatStatus": {},
+        "network": "projects/black-leg-sanji/global/networks/blackleg-vpc",
+        "serviceExternalIpsConfig": {},
+        "subnetwork": "projects/black-leg-sanji/regions/asia-south1/subnetworks/blackleg-mumbai"
+      },
+      "nodeConfig": {
+        "advancedMachineFeatures": {
+          "enableNestedVirtualization": false
+        },
+        "diskSizeGb": 100,
+        "diskType": "pd-balanced",
+        "effectiveCgroupMode": "EFFECTIVE_CGROUP_MODE_V2",
+        "imageType": "COS_CONTAINERD",
+        "machineType": "e2-medium",
+        "metadata": {
+          "disable-legacy-endpoints": "true"
+        },
+        "oauthScopes": [
+          "https://www.googleapis.com/auth/devstorage.read_only",
+          "https://www.googleapis.com/auth/logging.write",
+          "https://www.googleapis.com/auth/monitoring",
+          "https://www.googleapis.com/auth/servicecontrol",
+          "https://www.googleapis.com/auth/service.management.readonly",
+          "https://www.googleapis.com/auth/trace.append"
+        ],
+        "serviceAccount": "default",
+        "shieldedInstanceConfig": {
+          "enableIntegrityMonitoring": true
+        },
+        "windowsNodeConfig": {},
+        "workloadMetadataConfig": {
+          "mode": "GKE_METADATA"
+        }
+      },
+      "nodePoolDefaults": {
+        "nodeConfigDefaults": {
+          "loggingConfig": {
+            "variantConfig": {
+              "variant": "DEFAULT"
+            }
+          }
+        }
+      },
+      "nodePools": [
+        {
+          "autoscaling": {},
+          "config": {
+            "advancedMachineFeatures": {
+              "enableNestedVirtualization": false
+            },
+            "diskSizeGb": 100,
+            "diskType": "pd-balanced",
+            "effectiveCgroupMode": "EFFECTIVE_CGROUP_MODE_V2",
+            "imageType": "COS_CONTAINERD",
+            "machineType": "e2-medium",
+            "metadata": {
+              "disable-legacy-endpoints": "true"
+            },
+            "oauthScopes": [
+              "https://www.googleapis.com/auth/devstorage.read_only",
+              "https://www.googleapis.com/auth/logging.write",
+              "https://www.googleapis.com/auth/monitoring",
+              "https://www.googleapis.com/auth/servicecontrol",
+              "https://www.googleapis.com/auth/service.management.readonly",
+              "https://www.googleapis.com/auth/trace.append"
+            ],
+            "serviceAccount": "default",
+            "shieldedInstanceConfig": {
+              "enableIntegrityMonitoring": true
+            },
+            "windowsNodeConfig": {},
+            "workloadMetadataConfig": {
+              "mode": "GKE_METADATA"
+            }
+          },
+          "etag": "20a014ee-c6a3-4e2f-8b87-f56cc8812d6c",
+          "initialNodeCount": 2,
+          "instanceGroupUrls": [
+            "https://www.googleapis.com/compute/v1/projects/black-leg-sanji/zones/asia-south1-a/instanceGroupManagers/gke-stadium-default-pool-e0ba06a4-grp"
+          ],
+          "locations": [
+            "asia-south1-a"
+          ],
+          "management": {
+            "autoRepair": true,
+            "autoUpgrade": true
+          },
+          "maxPodsConstraint": {
+            "maxPodsPerNode": "32"
+          },
+          "name": "default-pool",
+          "networkConfig": {
+            "enablePrivateNodes": false,
+            "podIpv4CidrBlock": "192.168.0.0/23",
+            "podIpv4RangeUtilization": 0.25,
+            "podRange": "pod"
+          },
+          "podIpv4CidrSize": 26,
+          "queuedProvisioning": {},
+          "selfLink": "https://container.googleapis.com/v1/projects/black-leg-sanji/zones/asia-south1-a/clusters/stadium/nodePools/default-pool",
+          "status": "RUNNING",
+          "upgradeSettings": {
+            "maxSurge": 1,
+            "strategy": "SURGE"
+          },
+          "version": "1.30.5-gke.1014001"
+        }
+      ],
+      "notificationConfig": {
+        "pubsub": {}
+      },
+      "privateClusterConfig": {
+        "privateEndpoint": "10.1.0.11",
+        "publicEndpoint": "34.93.32.208"
+      },
+      "rbacBindingConfig": {
+        "enableInsecureBindingSystemAuthenticated": true,
+        "enableInsecureBindingSystemUnauthenticated": true
+      },
+      "releaseChannel": {
+        "channel": "REGULAR"
+      },
+      "resourceLabels": {
+        "target-argocd-cluster": "true"
+      },
+      "secretManagerConfig": {
+        "enabled": false
+      },
+      "securityPostureConfig": {
+        "mode": "BASIC",
+        "vulnerabilityMode": "VULNERABILITY_DISABLED"
+      },
+      "selfLink": "https://container.googleapis.com/v1/projects/black-leg-sanji/zones/asia-south1-a/clusters/stadium",
+      "servicesIpv4Cidr": "192.168.2.0/23",
+      "shieldedNodes": {
+        "enabled": true
+      },
+      "status": "RUNNING",
+      "subnetwork": "blackleg-mumbai",
+      "workloadIdentityConfig": {
+        "workloadPool": "black-leg-sanji.svc.id.goog"
+      },
+      "zone": "asia-south1-a"
+    }
+  ]
