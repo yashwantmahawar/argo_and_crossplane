@@ -1,0 +1,23 @@
+FROM gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
+
+# Install argocd CLI
+RUN gcloud components install kubectl
+RUN curl -sSL -o argocd https://github.com/argoproj/argo-cd/releases/download/v2.1.2/argocd-linux-amd64
+RUN curl -sSL -o jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
+RUN chmod 755 argocd
+RUN chmod 755 jq
+RUN mv argocd /usr/local/bin
+RUN mv jq /usr/local/bin
+
+RUN mkdir -p /argo-script
+WORKDIR /argo-script
+COPY add_cluster.sh /argo-script
+
+# Make the script executable
+RUN chmod 755 /argo-script
+RUN chmod +x add_cluster.sh
+
+RUN ls -la /argo-script
+
+# Add cron job to run the script
+CMD ["/argo-script/add_cluster.sh"]

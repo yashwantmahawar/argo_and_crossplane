@@ -19,16 +19,17 @@ spec:
         url: https://github.com/yashwantmahawar/argo_and_crossplane
   template:
     metadata:
-      name: my-app-{{ cluster }} # Name will be my-app-cluster1, my-app-cluster2, etc.
+      name: my-application-{{ cluster }} # Name will be my-app-cluster1, my-app-cluster2, etc.
     spec:
       project: default  # Replace with your Argo CD project name
       source:
         repoURL: "{{ url }}"
         targetRevision: HEAD
-        recurse: true
-        exclude:
-          - '**/argocd/application-sets/root/*'
         path: argocd/application-sets/  # Path to your Kubernetes manifests within the repository
+        directory:
+         recurse: true
+         jsonnet: {}
+         exclude: '{**/argocd/application-sets/root/*}'
       destination:
         server: https://kubernetes.default.svc
         namespace: argocd  # Replace with your desired namespace
