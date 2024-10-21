@@ -25,6 +25,7 @@ spec:
       source:
         repoURL: "{{ url }}"
         targetRevision: HEAD
+      directory:
         recurse: true
         exclude:
           - '**/argocd/application-sets/root/*'
