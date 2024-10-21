@@ -8,7 +8,7 @@ spec:
  source:
    repoURL: 'https://github.com/yashwantmahawar/argo_and_crossplane'
    targetRevision: HEAD
-   path: 'argocd/crossplane/providers'
+   path: 'crossplane/providers'
  destination:
    server: 'https://kubernetes.default.svc'
    namespace: crossplane-system

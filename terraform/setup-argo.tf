@@ -105,7 +105,7 @@ resource "kubernetes_manifest" "argocd_application_set" {
       project = "default"
       source = {
         repoURL        = "https://github.com/yashwantmahawar/argo_and_crossplane"
-        path           = "argocd/application-sets/root"
+        path           = "argocd/root"
         targetRevision = "HEAD"
       }
       destination = {
