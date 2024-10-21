@@ -4,6 +4,12 @@ resource "kubernetes_namespace" "argocd" {
   }
 }
 
+resource "kubernetes_namespace" "crossplane" {
+  metadata {
+    name = "crossplane-system"
+  }
+}
+
 
 resource "kubernetes_cluster_role_binding" "argocd" {
   metadata {
@@ -38,6 +44,24 @@ resource "helm_release" "argocd" {
         type: LoadBalancer # Expose Argo CD externally
     EOF
   ]
+}
+
+resource "helm_release" "crossplane" {
+  name       = "crossplane"
+  repository = "https://charts.crossplane.io/stable"
+  chart      = "crossplane"
+
+  namespace = kubernetes_namespace.crossplane.metadata.0.name
+  # version   = "6.7.11" # Use the latest version
+
+  # Customize values as needed
+  # values = [
+  #   <<-EOF
+  #   server:
+  #     service:
+  #       type: LoadBalancer # Expose Argo CD externally
+  #   EOF
+  # ]
 }
 
 data "kubernetes_secret" "argocd_initial_admin_secret" {
