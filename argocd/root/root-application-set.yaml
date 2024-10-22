@@ -35,5 +35,5 @@ spec:
         namespace: argocd  # Replace with your desired namespace
       syncPolicy:
         automated: 
-          prune: true
-          selfHeal: true
+          prune: false
+          selfHeal: false

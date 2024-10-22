@@ -112,12 +112,12 @@ resource "kubernetes_manifest" "argocd_application_set" {
         server    = "https://kubernetes.default.svc"
         namespace = "argocd"
       }
-      syncPolicy = {
-        automated = {
-          prune : "False"
-          selfHeal : "False"
-        }
-      }
+      # syncPolicy = {
+      #   automated = {
+      #     prune : null
+      #     selfHeal : null
+      #   }
+      # }
     }
   }
   depends_on = [ google_container_cluster.primary, helm_release.argocd, helm_release.crossplane ]
