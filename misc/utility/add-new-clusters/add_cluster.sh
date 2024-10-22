@@ -5,8 +5,8 @@
 argocd  login xx.xx.xx.xx --insecure --username admin --password xxxxxxx
 # Get cluster information (name, location, project) for clusters with the specified label
 cluster_info=$(gcloud container clusters list \
-  --format="json(name,location)" \
-  --filter="resourceLabels.target-argocd-cluster=true")
+  --format="json(name,location)" )
+  #--filter="resourceLabels.target-argocd-cluster=true"
 
 # Loop through the cluster information and add them to Argo CD
 for cluster in $(echo "${cluster_info}" | jq -r '.[] | @base64'); do
