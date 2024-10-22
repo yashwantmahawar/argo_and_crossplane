@@ -14,7 +14,7 @@ resource "google_service_account" "gke-sa" {
 }
 
 resource "google_container_cluster" "primary" {
-  name                     = "my-gke-cluster"
+  name                     = "my-demo-cluster"
   location                 = "asia-south1"
   network                  = "blackleg-vpc"
   subnetwork               = "blackleg-mumbai"

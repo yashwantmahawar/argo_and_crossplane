@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "terraform-backend-5656"
+    bucket = "terraform-state-124"
   }
   required_providers {
     argocd = {

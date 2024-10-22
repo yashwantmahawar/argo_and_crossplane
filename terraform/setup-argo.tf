@@ -114,15 +114,12 @@ resource "kubernetes_manifest" "argocd_application_set" {
       }
       syncPolicy = {
         automated = {
-          prune : true
-          selfHeal : true
+          prune : "False"
+          selfHeal : "False"
         }
       }
     }
   }
+  depends_on = [ google_container_cluster.primary, helm_release.argocd, helm_release.crossplane ]
 }
-
-# output "dummy" {
-#   value = yamldecode(file("../argocd/application-sets/root/root-application-set.yaml"))
-# }
 
