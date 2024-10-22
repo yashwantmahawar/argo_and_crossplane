@@ -34,6 +34,4 @@ spec:
         server: https://kubernetes.default.svc
         namespace: argocd  # Replace with your desired namespace
       syncPolicy:
-        automated: 
-          prune: false
-          selfHeal: false
+        automated: null
