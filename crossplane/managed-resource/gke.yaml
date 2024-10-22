@@ -13,4 +13,4 @@ spec:
     enableIntranodeVisibility: true
     ipAllocationPolicy:
       - {}
-    location: europe-north1
+    location: asia-south1
